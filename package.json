@@ -1,11 +1,11 @@
 {
   "name": "hefeng-weather-mcp",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "an mcp server for hefeng weather api",
   "main": "dist/index.js",
   "bin": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && node ./add-shebang.cjs"
   },
   "files": [
     "dist"
