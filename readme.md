@@ -9,6 +9,16 @@ A Model Context Protocol server that provides weather forecast data for location
 - Get daily weather forecast (3d/7d/10d/15d/30d)
 - Support location query by longitude and latitude coordinates
 - Full Chinese weather description
+- JWT authentication support
+
+## Configuration
+
+This MCP server uses JWT authentication as required by HeFeng Weather API. You need to provide:
+
+- `apiHost`: Your API host URL (e.g., https://your_api_host)
+- `privateKey`: Your EdDSA private key
+- `keyId`: Your key ID
+- `projectId`: Your project ID
 
 ## API
 
@@ -29,10 +39,23 @@ Add this to your claude_desktop_config.json
   "mcpServers": {
     "hefeng-weather": {
       "command": "npx",
-      "args": ["hefeng-mcp-weather@latest", "--apiKey=${API_KEY}"]
+      "args": ["hefeng-mcp-weather@latest", "--apiHost=${YOUR_API_HOST}", "--privateKey=${YOUR_PRIVATE_KEY}", "--keyId=${YOUR_KEY_ID}", "--projectId=${YOUR_PROJECT_ID}"]
     }
   }
 }
+```
+
+## Local Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Build the project
+pnpm run build
+
+# Run with JWT authentication
+node dist/index.js --apiHost="https://your_api_host" --privateKey="YOUR_PRIVATE_KEY" --keyId="YOUR_KEY_ID" --projectId="YOUR_PROJECT_ID"
 ```
 
 # License

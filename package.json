@@ -16,10 +16,11 @@
     "weather",
     "hefeng-weather"
   ],
-  "author": "shanggqm",
+  "author": "conscloud",
   "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
+    "jose": "^6.0.12",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -29,10 +30,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanggqm/hefeng-mcp-weather.git"
+    "url": "git+https://github.com/conscloud/hefeng-mcp-weather.git"
   },
   "bugs": {
-    "url": "https://github.com/shanggqm/hefeng-mcp-weather/issues"
+    "url": "https://github.com/conscloud/hefeng-mcp-weather/issues"
   },
-  "homepage": "https://github.com/shanggqm/hefeng-mcp-weather#readme"
+  "homepage": "https://github.com/conscloud/hefeng-mcp-weather#readme"
 }
