@@ -336,7 +336,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             const cityList = cityData.location.map(city => {
                 return `城市: ${city.name}\n` +
                     `ID: ${city.id}\n` +
-                    `经纬度: ${city.lat}, ${city.lon}\n` +
+                    `经纬度: ${city.lon},${city.lat}\n` +
                     `省份: ${city.adm1}\n` +
                     `城市: ${city.adm2}\n` +
                     `国家: ${city.country}\n` +
