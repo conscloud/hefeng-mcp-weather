@@ -1,6 +1,6 @@
 {
-  "name": "hefeng-mcp-weather",
-  "version": "0.1.1",
+  "name": "hefeng-weather-mcp",
+  "version": "0.2.0",
   "description": "an mcp server for hefeng weather api",
   "main": "dist/index.js",
   "bin": "dist/index.js",

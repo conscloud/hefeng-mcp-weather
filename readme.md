@@ -51,7 +51,7 @@ A Model Context Protocol server that provides weather forecast data for location
     "hefeng-weather": {
       "command": "npx",
       "args": [
-        "hefeng-mcp-weather@latest",
+        "hefeng-weather-mcp@latest",
         "--apiHost=https://devapi.qweather.com",
         "--privateKey=${YOUR_PRIVATE_KEY}",
         "--keyId=${YOUR_KEY_ID}",
