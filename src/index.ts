@@ -21,10 +21,14 @@ const keyIdArg = process.argv.find(arg => arg.startsWith('--keyId='));
 const projectIdArg = process.argv.find(arg => arg.startsWith('--projectId='));
 
 if (apiHostArg) {
-    API_HOST = apiHostArg.split('=')[1];
+    let rawHost = apiHostArg.split('=')[1];
+    // 去除首尾引号
+    API_HOST = rawHost.replace(/^["']|["']$/g, '');
 }
 if (privateKeyArg) {
-    PRIVATE_KEY = privateKeyArg.split('=')[1];
+    let rawKey = privateKeyArg.split('=')[1];
+    // 自动还原换行
+    PRIVATE_KEY = rawKey.replace(/\\\\n/g, '\n').replace(/\\n/g, '\n');
 }
 if (keyIdArg) {
     KEY_ID = keyIdArg.split('=')[1];
